@@ -82,7 +82,7 @@
 										</div>
 									</fieldset>
 								</div
-								<div class="clearfix"></div> 
+								><div class="clearfix"></div> 
 							</form>
 						</div>
 					</div>
@@ -125,6 +125,9 @@
 			});
 			function getCliente(){
 				var txtNomCliente= $("#txtNomCliente").val();
+				var mayo= $("#slcMayorita").val();
+				if(mayo=='CVA')
+				{
 				$.ajax({
 					url : "ajax/getDatos.php",
 					type: "POST",
@@ -136,6 +139,11 @@
 						$("#txtNomComer").val(types[0]['CTE_NOM_COMERCIAL']);
 					}
 				});
+				}else
+				{
+					$("#RazonSocial").val("");
+						$("#txtNomComer").val("");
+				}
 			}
 			function getDatos(r){
 				if(r.value=="CVA"){
