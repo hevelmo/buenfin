@@ -1,12 +1,12 @@
 <?php 
 	
-    include_once "../prueba-nueva/core/environment/_includes.inc.php";
+    include_once "../core/environment/_includes.inc.php";
 
 	$titulo = 'GHIA | Buen Fin';
 	$sub_header = 'Solicitud de Informaci&oacute;n de promociones BUEN FIN GHIA';
-	$is_buenfin = 'buen-fin';
+	$is_buenfin = '';
 
-	include_once "../prueba-nueva/templates/doc.declaracion.inc.php";
+	include_once "../templates/doc.declaracion.inc.php";
 ?>
         <input id="_host" type="hidden" value="<?php echo _HOST; ?>">
         <input id="_body" type="hidden" value="set_body">
@@ -15,9 +15,9 @@
 
         <?php
             // Header 
-            include_once "../prueba-nueva/templates/_header_by_section.php";
+            include_once "../templates/_header_by_section.php";
             // Sub Header
-            include_once "../prueba-nueva/core/componentes/_sub_header.php";
+            include_once "../core/componentes/_sub_header.php";
 		?>
 			<section class="">
 				<div class="container">
@@ -90,7 +90,7 @@
 			</section>
 		<?php
             // Footer 
-            include_once "../prueba-nueva/templates/_footer_by_section.php";
+            include_once "../templates/_footer_by_section.php";
         ?>
 		<a href="#0" class="cd-top is-click-back-to-top" id="go_top" data-tooltip="Ir Arriba" data-tooltip-stickto="top" data-tooltip-animate-function="foldin">Top</a><?php // /a.cd_top ?>
 
@@ -98,7 +98,7 @@
 		<!--<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.12.0.min.js"></script>-->
 		
         <?php
-			require_once("../prueba-nueva/templates/general_scripts.php");
+			require_once("../templates/general_scripts.php");
 		?> 
 		<script>
 			function validarTelefono(r){
@@ -161,5 +161,5 @@
 		</script>
 		
 <?php
-    include_once "../prueba-nueva/templates/doc.cierre.inc.php";
+    include_once "../templates/doc.cierre.inc.php";
 ?>
